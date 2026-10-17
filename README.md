@@ -12,13 +12,9 @@ Install Foreman with the skills CLI:
 npx skills add rfxlamia/claude-foreman
 ```
 
-The commands below assume Foreman is installed at `~/.claude/skills/foreman`; run them from that directory. Copy the template, fill in the brief, then dispatch it:
-
-```bash
-cp references/brief-template.md brief.md
-D=~/.claude/skills/foreman/scripts/dispatch.sh
-$D list
-$D run codex brief.md --task fix-example
+Then run in claude :
+```
+/foreman
 ```
 
 Fill in the brief before dispatching. It should state the goal, relevant context, allowed file scope, rules, and an exact verification command. The worker does not have access to the foreman's conversation. After the run, inspect the diff and run the checks yourself; a worker's report is not verification.
@@ -36,9 +32,7 @@ Sandbox and permission behavior depends on the adapter. Codex runs with its sand
 Use `--live` when you want to watch or co-drive a worker in its terminal UI. This mode uses a shared `tmux` session; the task still uses its worktree and adapter sandbox. Headless mode remains the default. Live mode requires `tmux`.
 
 ```bash
-$D run codex brief.md --task fix-example --live
-$D peek fix-example
-$D wait fix-example --timeout 600
+/foreman live mode
 ```
 
 See [Live mode](references/live-mode.md) for sending follow-up instructions, handling permission dialogs, and cleaning up a session.
