@@ -1,0 +1,12 @@
+{
+  "name": "claude-foreman",
+  "description": "Foreman: delegate coding to external agent CLIs",
+  "owner": { "name": "rfxlamia" },
+  "plugins": [
+    {
+      "name": "foreman",
+      "source": "./",
+      "description": "Delegate implementation to external coding-agent CLIs (Codex, Antigravity) while Claude acts as foreman."
+    }
+  ]
+}
