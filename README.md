@@ -1,12 +1,19 @@
 # Foreman
 
-![Foreman project header](assets/foreman-header.png)
+![Foreman project header](assets/foreman-header-transparent.png)
 
 Foreman lets Claude delegate implementation work to external coding-agent CLIs. Claude acts as the foreman: it plans the work, writes a self-contained brief, reviews the diff, and verifies the result. A worker CLI does the implementation.
 
 ## Quick start
 
-Install Foreman with the skills CLI:
+Install Foreman as a Claude Code plugin:
+
+```bash
+claude plugin marketplace add rfxlamia/claude-foreman
+claude plugin install foreman@claude-foreman
+```
+
+Or with the skills CLI:
 
 ```bash
 npx skills add rfxlamia/claude-foreman

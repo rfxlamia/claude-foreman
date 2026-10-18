@@ -1,0 +1,9 @@
+{
+  "name": "foreman",
+  "version": "0.1.0",
+  "description": "Delegate implementation to external coding-agent CLIs (Codex, Antigravity) while Claude acts as foreman: plan, brief, review, verify.",
+  "author": { "name": "rfxlamia" },
+  "homepage": "https://github.com/rfxlamia/claude-foreman",
+  "repository": "https://github.com/rfxlamia/claude-foreman",
+  "skills": ["./"]
+}
